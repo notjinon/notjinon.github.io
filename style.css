@@ -1,0 +1,45 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Header styles */
+  header {
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 2rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f4f4f4;
+  }
+  
