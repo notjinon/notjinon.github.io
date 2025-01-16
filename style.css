@@ -1,45 +1,120 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #0d1b2a;
+    background-color: #e0e1dd;
+    text-align: center;
   }
+  .main {
+    margin: 0 auto; /* Centers the text section horizontally */
+    text-align: center; /* Aligns text within the section */
+    max-width: 900px; /* Limits the width of the text section */
+    word-wrap: break-word; /* Prevents text overflow */
+    overflow-wrap: break-word; /* Ensures word breaks for longer words */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adds spacing between lines */
+    padding: 10px; /* Adds some padding for better aesthetics */
+    position: relative; /* Allows us to adjust the position */
+    top: -50px; /* Moves the element up by 50 pixels */
+}
   
-  /* Header styles */
-  header {
-    background: #007bff;
-    color: white;
-    padding: 1rem;
-  }
-  
-  header h1 {
+/* Header styles */
+header {
+    background: #ee5e5e;
+    color: #E0E1DD;
+    padding: 1rem 2rem;
+    border-radius: 15px; /* Rounded corners for the "island" effect */
+    max-width: 1000px; /* Set a maximum width for the header */
+    margin: 2rem auto; /* Center the header horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Space between name and navigation */
+    align-items: center; /* Center items vertically */
+}
+
+header h1, h2{
     margin: 0;
-  }
-  
-  nav ul {
+    font-family: 'Lexend Deca', serif;
+    font-weight: 700;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 1rem;
-  }
-  
-  nav a {
-    color: white;
+}
+
+nav a {
+    color: #E0E1DD;
     text-decoration: none;
-  }
-  
-  /* Section styles */
-  section {
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners for the navigation links */
+    background-color: #ee5e5e; /* Background color for the buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    background-color: #1b263b; /* Change background color on hover */
+}
+
+.resume-container {
+    border: 1px solid #0d1b2a; /* Adds a subtle border */
+    border-radius: 5px; /* Rounds the edges */
+    overflow: hidden; /* Ensures no overflow from iframe */
+    margin: 20px 0; /* Adds some spacing around the resume */
+}
+
+
+.social-link {
+    list-style: none; /* Removes default list styling */
+    text-decoration: none; /* Removes underline */
+    color: #0d1b2a; /* Text color */
+    padding: 10px 15px; /* Padding for a button-like look */
+    border-radius: 5px; /* Rounded edges */
+    align-items: center; /* Aligns items vertically */
+    align-content: center; /* Aligns items horizontally */
+    font-size: 16px; /* Adjusts text size */
+    max-width: fit-content; /* Adjusts width to fit content */
+    margin: 0 auto; /* Centers the buttons horizontally */
+    display: block; /* Displays links as block elements */
+    font-weight: bold; /* Makes the text bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-link:hover {
+    background-color: #ff3232; /* Changes background color on hover */
+}
+/* Section styles */
+section {
     padding: 2rem;
-    margin: 1rem 0;
-    border: 1px solid #ddd;
-  }
+    margin: 1rem;
+    }
+
+section h2 {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
   
   footer {
     text-align: center;
     padding: 1rem;
     background: #f4f4f4;
-  }
-  
+    }
+
+/* Font Styles */
+
+/* Lexend Deca Bold Class */
+.lexend-deca-bold {
+    font-family: "Lexend Deca", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
