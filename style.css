@@ -123,6 +123,24 @@ footer {
     font-style: normal;
 }
 
+/* Responsive embed */
+.responsive-embed {
+    width: 100%;
+    height: 800px;
+}
+
+@media (max-width: 768px) {
+    .responsive-embed {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-embed {
+        height: 300px;
+    }
+}
+
 /* mobile styles */
 body.mobile-mode {
     font-size: 14px;
