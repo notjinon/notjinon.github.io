@@ -103,11 +103,16 @@ section h2 {
     font-weight: 700;
 }
   
-  footer {
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 1rem;
     background: #E0E1DD;
-    }
+    color: #0d1b2a;
+}
 
 
 /* Lexend Deca Bold Class */
