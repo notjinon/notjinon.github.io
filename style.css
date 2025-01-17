@@ -109,7 +109,6 @@ section h2 {
     background: #f4f4f4;
     }
 
-/* Font Styles */
 
 /* Lexend Deca Bold Class */
 .lexend-deca-bold {
@@ -117,4 +116,50 @@ section h2 {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+/* mobile styles */
+body.mobile-mode {
+    font-size: 14px;
+}
+
+body.mobile-mode header .header-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+body.mobile-mode nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.mobile-mode nav ul.show {
+    display: flex;
+}
+
+body.mobile-mode nav ul li {
+    margin: 10px 0;
+}
+
+body.mobile-mode .main {
+    padding: 10px;
+}
+
+body.mobile-mode .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
 }

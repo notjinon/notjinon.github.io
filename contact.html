@@ -14,6 +14,7 @@
     <header>
         <div class="header-content">
             <h1 class="lexend-deca-bold">jino nicolas</h1>
+            <button class="hamburger" onclick="toggleNavMenu()">&#9776;</button>
             <nav>
                 <ul>
                     <li><a href="index.html">home</a></li>
@@ -37,5 +38,25 @@
             </section>
         </div>
     </main>
+    <script>
+        function toggleMobileMode() {
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('mobile-mode');
+            } else {
+                document.body.classList.remove('mobile-mode');
+            }
+        }
+
+        function toggleNavMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+
+        // Initial check
+        toggleMobileMode();
+
+        // Add event listener for window resize
+        window.addEventListener('resize', toggleMobileMode);
+    </script>
 </body>
 </html>
