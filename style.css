@@ -106,7 +106,7 @@ section h2 {
   footer {
     text-align: center;
     padding: 1rem;
-    background: #f4f4f4;
+    background: #E0E1DD;
     }
 
 
@@ -156,6 +156,7 @@ body.mobile-mode .hamburger {
 
 .hamburger {
     display: none;
+    color: #E0E1DD; /* Offwhite color */
 }
 
 @media (max-width: 768px) {
