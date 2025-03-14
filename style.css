@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #0d1b2a;
-    background-color: #e0e1dd;
+    background-color: #FAF9F6;
     text-align: center;
   }
   .main {
@@ -24,12 +24,17 @@ body {
 /* Header styles */
 header {
     background: #ee5e5e;
-    color: #E0E1DD;
+    color: #FAF9F6;
     padding: 1rem 2rem;
     border-radius: 15px; /* Rounded corners for the "island" effect */
     max-width: 1000px; /* Set a maximum width for the header */
     margin: 2rem auto; /* Center the header horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    border-style: solid; /* Add a border */
+    border-width: 5px; /* Set the border width */
+    border-radius: 10px; /* Rounded corners for the navigation links */
+    border-color: #0d1b2a; /* Set the border color */
+    box-shadow: 4px 4px #0d1b2a; /* Make the shadow*/
+    
 }
 
 .header-content {
@@ -52,16 +57,27 @@ nav ul {
 }
 
 nav a {
-    color: #E0E1DD;
+    color: #FAF9F6;
     text-decoration: none;
+    align-content: center;
     padding: 0.5rem 1rem;
-    border-radius: 5px; /* Rounded corners for the navigation links */
+    border-style: solid;
+    border-color: #0d1b2a;
+    border-radius: 10px; /* Rounded corners for the navigation links */
+    box-shadow: 4px 4px #0d1b2a; /* Make the shadow*/
     background-color: #ee5e5e; /* Background color for the buttons */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
+    display: flex;
+    justify-content: center; /* Aligns text in the middle horizontally */
+    align-items: center; /* Aligns text in the middle vertically */
 }
 
 nav a:hover {
     background-color: #1b263b; /* Change background color on hover */
+    border-style: solid;
+    border-color: #0d1b2a;
+    transform: matrix(1, 0, 0, 1, 0, 0); /* Add a subtle lift on hover */
+    border-radius: 10px; /* Rounded corners for the navigation links */
 }
 
 .resume-container {
@@ -110,7 +126,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 1rem;
-    background: #E0E1DD;
+    background: #FAF9F6;
     color: #0d1b2a;
 }
 
@@ -179,7 +195,7 @@ body.mobile-mode .hamburger {
 
 .hamburger {
     display: none;
-    color: #E0E1DD; /* Offwhite color */
+    color: #FAF9F6; /* Offwhite color */
 }
 
 @media (max-width: 768px) {
