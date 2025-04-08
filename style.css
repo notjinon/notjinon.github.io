@@ -85,6 +85,14 @@ nav a:hover {
     border-radius: 10px; /* Rounded corners for the navigation links */
 }
 
+a{
+    text-decoration: none; /* Removes underline from links */
+    color: #ee5e5e; /* Offwhite color */
+}
+a:hover {
+    color: #FAF9F6; /* Changes color on hover */
+}
+
 .resume-container {
     border: 1px solid #0d1b2a; /* Adds a subtle border */
     border-radius: 5px; /* Rounds the edges */
