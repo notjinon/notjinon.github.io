@@ -20,7 +20,12 @@ body {
     position: relative; /* Allows us to adjust the position */
     top: -50px; /* Moves the element up by 50 pixels */
 }
-  
+
+/* divider style */
+hr.rounded {
+    border-top: 3px solid #0d1b2a;
+    border-radius: 5px;
+  }
 /* Header styles */
 header {
     background: #ee5e5e;
