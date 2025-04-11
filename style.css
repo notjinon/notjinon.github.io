@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding-bottom: 1000px;
     color: #0d1b2a;
     background-color: #FAF9F6;
     text-align: center;
@@ -83,6 +83,14 @@ nav a:hover {
     border-color: #0d1b2a;
     transform: matrix(1, 0, 0, 1, 0, 0); /* Add a subtle lift on hover */
     border-radius: 10px; /* Rounded corners for the navigation links */
+}
+
+a{
+    text-decoration: none; /* Removes underline from links */
+    color: #ee5e5e; /* Offwhite color */
+}
+a:hover {
+    color: #0d1b2a; /* Changes color on hover */
 }
 
 .resume-container {
