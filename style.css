@@ -10,7 +10,6 @@ body {
   }
   .main {
     margin: 0 auto; /* Centers the text section horizontally */
-    text-align: center; /* Aligns text within the section */
     max-width: 900px; /* Limits the width of the text section */
     word-wrap: break-word; /* Prevents text overflow */
     overflow-wrap: break-word; /* Ensures word breaks for longer words */
