@@ -6,7 +6,7 @@ body {
     padding-bottom: 1000px;
     color: #0d1b2a;
     background-color: #FAF9F6;
-    text-align: center;
+    text-align: left;
   }
   .main {
     margin: 0 auto; /* Centers the text section horizontally */
@@ -78,6 +78,7 @@ nav a {
 }
 
 nav a:hover {
+    color: #FAF9F6;
     background-color: #1b263b; /* Change background color on hover */
     border-style: solid;
     border-color: #0d1b2a;
