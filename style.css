@@ -134,6 +134,36 @@ nav a:hover {
     box-shadow: 4px 4px #0d1b2a;
 }
 
+.msdos-tooltip {
+    position: relative;
+}
+
+.msdos-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+    background-color: #0b0f0c;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+    padding: 0.4rem 0.6rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+    z-index: 10;
+}
+
+.msdos-tooltip:hover::after,
+.msdos-tooltip:focus-visible::after {
+    opacity: 1;
+}
+
 a{
     text-decoration: none; /* Removes underline from links */
     color: #ee5e5e; /* Offwhite color */
