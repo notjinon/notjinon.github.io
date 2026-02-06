@@ -38,13 +38,25 @@ header {
     border-radius: 10px; /* Rounded corners for the navigation links */
     border-color: #0d1b2a; /* Set the border color */
     box-shadow: 4px 4px #0d1b2a; /* Make the shadow*/
-    
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+    }
 }
 
 .header-content {
     display: flex;
     justify-content: space-between; /* Space between name and navigation */
     align-items: center; /* Center items vertically */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 header h1, h2{
@@ -74,6 +86,7 @@ nav a {
     display: flex;
     justify-content: center; /* Aligns text in the middle horizontally */
     align-items: center; /* Aligns text in the middle vertically */
+    min-width: 100px;
 }
 
 nav a:hover {
@@ -83,6 +96,42 @@ nav a:hover {
     border-color: #0d1b2a;
     transform: matrix(1, 0, 0, 1, 0, 0); /* Add a subtle lift on hover */
     border-radius: 10px; /* Rounded corners for the navigation links */
+}
+
+.msdos-link {
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    color: #39ff14;
+    background-color: #0b0f0c;
+    border: 2px solid #39ff14;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    box-shadow: 2px 2px #0d1b2a;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    min-width: 100px;
+}
+
+.msdos-link .msdos-subtitle {
+    font-size: 0.45rem;
+    letter-spacing: 0.12em;
+    opacity: 0.9;
+}
+
+.msdos-link .msdos-title {
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+}
+
+.msdos-link:hover {
+    color: #0b0f0c;
+    background-color: #39ff14;
+    box-shadow: 4px 4px #0d1b2a;
 }
 
 a{
@@ -171,48 +220,96 @@ footer {
 }
 
 /* mobile styles */
-body.mobile-mode {
-    font-size: 14px;
-}
-
-body.mobile-mode header .header-content {
-    flex-direction: column;
-    align-items: center;
-}
-
-body.mobile-mode nav ul {
+.hamburger {
     display: none;
-    flex-direction: column;
-    align-items: center;
-}
-
-body.mobile-mode nav ul.show {
-    display: flex;
-}
-
-body.mobile-mode nav ul li {
-    margin: 10px 0;
-}
-
-body.mobile-mode .main {
-    padding: 10px;
-}
-
-body.mobile-mode .hamburger {
-    display: block;
+    color: #FAF9F6;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-}
-
-.hamburger {
-    display: none;
-    color: #FAF9F6; /* Offwhite color */
+    padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+    }
+    
+    nav a {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .msdos-link {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .main {
+        padding: 10px;
+        top: -20px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+    
+    header h1 {
+        font-size: 1.25rem;
+    }
+    
+    nav a, .msdos-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .msdos-link .msdos-subtitle {
+        font-size: 0.4rem;
+    }
+    
+    .msdos-link .msdos-title {
+        font-size: 0.65rem;
+    }
+    
+    section {
+        padding: 1rem;
+        margin: 0.5rem;
     }
 }
