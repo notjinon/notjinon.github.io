@@ -107,7 +107,7 @@ nav a:hover {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    box-shadow: 2px 2px #0d1b2a;
+    box-shadow: 4px 4px #0d1b2a;
     border-radius: 10px;
     display: inline-flex;
     flex-direction: column;
