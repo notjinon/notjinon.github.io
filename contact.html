@@ -15,12 +15,17 @@
     <link rel="manifest" href="assets/site.webmanifest">
 </head>
 <body>
+    <div class="menu-overlay" onclick="closeNavMenu()"></div>
     <header>
         <div class="header-content">
             <h1 class="lexend-deca-bold">jino nicolas</h1>
-            <button class="hamburger" onclick="toggleNavMenu()">&#9776;</button>
+            <button class="hamburger" onclick="toggleNavMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="header-right">
-                <nav>
+                <nav class="main-nav">
                     <ul>
                         <li><a href="index.html">home</a></li>
                         <li><a href="projects.html">work</a></li>
@@ -34,6 +39,18 @@
             </div>
         </div>
     </header>
+    <nav class="main-nav mobile-nav">
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="projects.html">work</a></li>
+            <li><a href="resume.html">resume</a></li>
+            <li class="nav-divider"></li>
+            <li><a class="msdos-link" href="https://notjinon.github.io/employment-trail/index.html">
+                <span class="msdos-subtitle">try the</span>
+                <span class="msdos-title">employment trail</span>
+            </a></li>
+        </ul>
+    </nav>
     <main>
         <div class="main">
             <section id="contact">
@@ -52,24 +69,25 @@
         <p>&copy; 2026, jino nicolas</p>
     </footer>  
     <script>
-        function toggleMobileMode() {
-            if (window.innerWidth <= 768) {
-                document.body.classList.add('mobile-mode');
-            } else {
-                document.body.classList.remove('mobile-mode');
-            }
-        }
-
         function toggleNavMenu() {
-            const nav = document.querySelector('nav ul');
+            const nav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.menu-overlay');
+            const hamburger = document.querySelector('.hamburger');
             nav.classList.toggle('show');
+            overlay.classList.toggle('show');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         }
-
-        // Initial check
-        toggleMobileMode();
-
-        // Add event listener for window resize
-        window.addEventListener('resize', toggleMobileMode);
+        
+        function closeNavMenu() {
+            const nav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.menu-overlay');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.remove('show');
+            overlay.classList.remove('show');
+            hamburger.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
     </script>
 </body>
 </html>
