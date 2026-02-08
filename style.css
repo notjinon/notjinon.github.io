@@ -104,6 +104,7 @@ header h1, h2 {
 
 .mobile-nav a:hover,
 .mobile-nav a:active {
+    color: #FAF9F6;
     background-color: #1b263b;
     transform: translate(1px, 1px);
     box-shadow: 2px 2px #0d1b2a;
@@ -174,6 +175,7 @@ header h1, h2 {
     }
     
     .main-nav a:hover {
+        color: #FAF9F6;
         background-color: #1b263b;
         transform: translate(1px, 1px);
         box-shadow: 2px 2px #0d1b2a;
