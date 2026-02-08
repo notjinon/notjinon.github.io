@@ -92,7 +92,7 @@ header h1, h2 {
     padding: 1rem 1.25rem;
     border: 3px solid #0d1b2a;
     border-radius: 10px;
-    box-shadow: 3px 3px #0d1b2a;
+    box-shadow: 6px 6px 0 0 #23243b;
     background-color: #ee5e5e;
     transition: all 0.2s ease;
     display: flex;
@@ -107,7 +107,7 @@ header h1, h2 {
     color: #FAF9F6;
     background-color: #1b263b;
     transform: translate(1px, 1px);
-    box-shadow: 2px 2px #0d1b2a;
+    box-shadow: 6px 6px 0 0 #23243b;
 }
 
 .nav-divider {
@@ -200,7 +200,7 @@ header h1, h2 {
     padding: 1rem 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    box-shadow: 3px 3px #0d1b2a;
+    box-shadow: 6px 6px 0 0 #23243b;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -225,7 +225,7 @@ header h1, h2 {
     color: #0b0f0c;
     background-color: #39ff14;
     transform: translate(1px, 1px);
-    box-shadow: 2px 2px #0d1b2a;
+    box-shadow: 6px 6px 0 0 #23243b;
 }
 
 .header-right .msdos-link {
