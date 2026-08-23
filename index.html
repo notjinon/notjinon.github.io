@@ -3,106 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jino's website</title>
+    <meta name="description" content="Jino Nicolas is an Industrial Engineering student at Purdue headed toward airport performance analytics at American Airlines.">
+    <title>Jino Nicolas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Roboto+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 </head>
-<body>
-    <div class="menu-overlay" onclick="closeNavMenu()"></div>
-    <header>
-        <div class="header-content">
-            <h1 class="lexend-deca-bold">jino nicolas</h1>
-            <button class="hamburger" onclick="toggleNavMenu()" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="header-right">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="projects.html">work</a></li>
-                        <li><a href="resume.html">resume</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </nav>
-                <a class="msdos-link msdos-tooltip" href="https://notjinon.github.io/employment-trail/index.html" data-tooltip="A postmodern satire.">
-                    <span class="msdos-subtitle">try the</span>
-                    <span class="msdos-title">employment trail</span>
-                </a>
-            </div>
-        </div>
+<body class="home-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="cloud-field" aria-hidden="true">
+        <video class="cloud-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Jino Nicolas homepage">Jino Nicolas</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="about.html">ABOUT</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="photos.html">PHOTOS</a>
+            <a class="fun-link" href="https://notjinon.github.io/employment-trail/index.html" data-rest="GAME" data-hover="TET">GAME</a>
+        </nav>
     </header>
-    <nav class="main-nav mobile-nav">
-        <ul>
-            <li><a href="projects.html">work</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="contact.html">contact</a></li>
-            <li class="nav-divider"></li>
-            <li><a class="msdos-link" href="https://notjinon.github.io/employment-trail/index.html">
-                <span class="msdos-subtitle">try the</span>
-                <span class="msdos-title">employment trail</span>
-            </a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="main">
-            <section id="about">
-                <h2>about me</h2>
-                <p>hi! i'm jino, a third-year student at purdue university, majoring in industrial engineering with a minor in 
-                    economics and a certificate in data science applications. 
-                    i like analyzing data to make smart decisions with impact, which has led me to the high-stakes yet messy field of aviation.</p>
-                <p>at purdue, i explore the intersection of engineering and institutions, 
-                    working with our liberal arts collaboratory in applying ML and big data to analyze the legislative process and its evolution over time. </p>
-                <p>my most recent work is with <b>united airlines'</b> transformation and process optimization team at newark liberty, leading analysis and improvements on station-wide processes. 
-                    my last major project was a comprehensive analysis on cabin maintenance as a delay driver, especially when issues are reported late in the boarding process. 
-                    previously, i helped architect process improvements for biometric boarding on international flights.
-                    </p>
-                <p>looking forward, i'm joining <b>american airlines'</b> airport performance analytics team out of dallas-fort worth airport.</p>    
-                <p>on a more personal note, i'm an avid swimmer and traveler, 
-                    a decent home chef, a tinkerer always thinking about their next project, 
-                    and a curious reader who enjoys nonfiction literature.</p>
-                <p>my guilty pleasure, though, is gaming.</p>
-            <hr class="rounded">
-                <div class="currently-working">
-                    <h3>currently working on:</h3>
-                    <ul>
-                        <li>study on the impact of late-call cabin maintenance requests (within 15 mins of departure) on otp at ewr</li>
-                        <li>a lightweight, dynamic CYOA text-based browser <a href = "https://notjinon.github.io/employment-trail/game.html"> game </a> satirizing the internship recruitment process</li>
-                        <li>modeling the effects of nonpartisan primaries on donation behavior within state elections</li>
-                    </ul>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__intro">
+                <p class="eyebrow" id="current-timestamp">DATE // TIME GMT+0</p>
+                <h1 id="hero-title" class="title-flap" aria-label="Hi, I'm Jino">
+                    <span data-start="SFO" data-final="Hi,">SFO</span>
+                    <span data-start="ORD" data-final="I&rsquo;m">ORD</span>
+                    <span data-start="DFW" data-final="Jino">DFW</span>
+                </h1>
+
+                <dl class="route-list reveal-after-title" aria-label="Jino's itinerary">
+                    <div>
+                        <dt>ORIG</dt>
+                        <dd data-start="SFO BAY" data-final="SF BAY AREA">SF Bay Area</dd>
+                    </div>
+                    <div>
+                        <dt>THRU</dt>
+                        <dd data-start="LAF PUR" data-final="IE @ PURDUE">IE @ Purdue</dd>
+                    </div>
+                    <div>
+                        <dt>DEST</dt>
+                        <dd data-start="DFW AMERICAN" data-final="AMERICAN AIRLINES">American Airlines</dd>
+                    </div>
+                </dl>
+
+                <div class="identity-links reveal-after-title" aria-label="Identity links">
+                    <a href="https://linkedin.com/in/notjinon" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="assets/S26_OResume%20(2).pdf">Resume</a>
+                    <a href="mailto:nicolasj@purdue.edu">Email</a>
                 </div>
-            </section>
-        </div>
-    </main>  
-    <footer>
-        <p>&copy; 2026, jino nicolas</p>
-    </footer>
+            </div>
+
+            <div class="hero__mosaic reveal-after-title" aria-label="Photo mosaic placeholders">
+                <div class="mosaic-card mosaic-card--wide" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for professional photo">
+                    <span class="mosaic-card__front">professional photo</span>
+                    <span class="mosaic-card__back">Caption placeholder for professional photo.</span>
+                </div>
+                <div class="mosaic-card mosaic-card--tall" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for aviation and operations">
+                    <span class="mosaic-card__front">aviation / ops</span>
+                    <span class="mosaic-card__back">Caption placeholder for aviation and operations.</span>
+                </div>
+                <div class="mosaic-card mosaic-card--small" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for Purdue and industrial engineering">
+                    <span class="mosaic-card__front">purdue / IE</span>
+                    <span class="mosaic-card__back">Caption placeholder for Purdue and industrial engineering.</span>
+                </div>
+                <div class="mosaic-card mosaic-card--medium" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for travel">
+                    <span class="mosaic-card__front">travel</span>
+                    <span class="mosaic-card__back">Caption placeholder for travel photo.</span>
+                </div>
+                <div class="mosaic-card mosaic-card--portrait" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for portrait">
+                    <span class="mosaic-card__front">portrait</span>
+                    <span class="mosaic-card__back">Caption placeholder for portrait photo.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script>
-        function toggleNavMenu() {
-            const nav = document.querySelector('.mobile-nav');
-            const overlay = document.querySelector('.menu-overlay');
-            const hamburger = document.querySelector('.hamburger');
-            nav.classList.toggle('show');
-            overlay.classList.toggle('show');
-            hamburger.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
+        const menuButton = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.site-nav');
+
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+            nav.classList.toggle('is-open', !isOpen);
+        });
+
+        nav.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                menuButton.setAttribute('aria-expanded', 'false');
+                nav.classList.remove('is-open');
+            }
+        });
+
+        const mosaicCards = [...document.querySelectorAll('.mosaic-card')];
+
+        mosaicCards.forEach((card) => {
+            function toggleCard() {
+                const shouldFlip = !card.classList.contains('is-flipped');
+
+                mosaicCards.forEach((otherCard) => {
+                    otherCard.classList.remove('is-flipped');
+                    otherCard.setAttribute('aria-pressed', 'false');
+                });
+
+                if (shouldFlip) {
+                    card.classList.add('is-flipped');
+                    card.setAttribute('aria-pressed', 'true');
+                }
+            }
+
+            card.addEventListener('click', toggleCard);
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleCard();
+                }
+            });
+        });
+
+        const airportCodes = ['DFW', 'SFO', 'EWR', 'ORD', 'LAF', 'MNL', 'PVG', 'AMS', 'HND', 'NRT', 'ATH', 'VCE'];
+        const glyphs = [...airportCodes.join(''), '@', ',', '/'];
+        const titleLines = [...document.querySelectorAll('.title-flap > span')];
+        const routeValues = [...document.querySelectorAll('.route-list dd')];
+        const funLink = document.querySelector('.fun-link');
+        const cloudVideo = document.querySelector('.cloud-video');
+        const timestamp = document.querySelector('#current-timestamp');
+        let funTimer;
+
+        function padText(text, length) {
+            return text.padEnd(length, ' ');
         }
-        
-        function closeNavMenu() {
-            const nav = document.querySelector('.mobile-nav');
-            const overlay = document.querySelector('.menu-overlay');
-            const hamburger = document.querySelector('.hamburger');
-            nav.classList.remove('show');
-            overlay.classList.remove('show');
-            hamburger.classList.remove('active');
-            document.body.classList.remove('menu-open');
+
+        function pickGlyph(seed) {
+            return glyphs[Math.abs(seed) % glyphs.length];
         }
+
+        function renderFlapText(element, text, className = '') {
+            element.innerHTML = '';
+            [...text].forEach((character) => {
+                const cell = document.createElement('span');
+                cell.className = character === ' ' ? `flap-space ${className}` : `flap-char ${className}`;
+                cell.textContent = character === ' ' ? '\u00a0' : character;
+                cell.dataset.value = character;
+                cell.dataset.variant = className;
+                element.appendChild(cell);
+            });
+        }
+
+        function setCell(cell, character) {
+            cell.className = character === ' ' ? `flap-space ${cell.dataset.variant}` : `flap-char ${cell.dataset.variant}`;
+            cell.textContent = character === ' ' ? '\u00a0' : character;
+            cell.dataset.value = character;
+            cell.classList.remove('is-flipping');
+            void cell.offsetWidth;
+            cell.classList.add('is-flipping');
+        }
+
+        function animateFlapText(element, targetText, options = {}) {
+            const target = padText(targetText, element.dataset.cellCount || targetText.length);
+            const cells = [...element.querySelectorAll('.flap-char, .flap-space')];
+            const duration = options.duration || 520;
+            const maxCycles = options.maxCycles || 4;
+            const baseDelay = options.baseDelay || 0;
+
+            return Promise.all(cells.map((cell, index) => {
+                const finalCharacter = target[index] || ' ';
+                const currentCharacter = cell.dataset.value || ' ';
+
+                if (currentCharacter === finalCharacter) {
+                    return Promise.resolve();
+                }
+
+                return new Promise((resolve) => {
+                    const cycles = finalCharacter === ' ' ? 1 : 1 + ((index * 7 + finalCharacter.charCodeAt(0)) % maxCycles);
+                    const delay = baseDelay + ((index * 37) % duration);
+                    const step = 42 + ((index * 13) % 34);
+
+                    window.setTimeout(() => {
+                        let tick = 0;
+                        const timer = window.setInterval(() => {
+                            tick += 1;
+                            const isLast = tick >= cycles;
+                            const nextCharacter = isLast ? finalCharacter : pickGlyph(index + tick * 5 + finalCharacter.charCodeAt(0));
+                            setCell(cell, nextCharacter);
+
+                            if (isLast) {
+                                window.clearInterval(timer);
+                                window.setTimeout(() => {
+                                    cell.classList.remove('is-flipping');
+                                    resolve();
+                                }, 120);
+                            }
+                        }, step);
+                    }, delay);
+                });
+            }));
+        }
+
+        function glitchLink(targetText) {
+            if (!funLink) {
+                return;
+            }
+
+            window.clearInterval(funTimer);
+            const from = funLink.textContent;
+            const target = targetText.padEnd(from.length, ' ');
+            let tick = 0;
+
+            funLink.classList.add('is-glitching');
+            funTimer = window.setInterval(() => {
+                tick += 1;
+                funLink.textContent = [...target].map((character, index) => {
+                    if (tick > index + 1) {
+                        return character;
+                    }
+
+                    return glyphs[(tick * 5 + index * 7) % glyphs.length];
+                }).join('').trim();
+
+                if (tick >= target.length + 2) {
+                    window.clearInterval(funTimer);
+                    funLink.textContent = targetText;
+                    funLink.classList.toggle('is-tet', targetText === funLink.dataset.hover);
+                    funLink.classList.remove('is-glitching');
+                }
+            }, 34);
+        }
+
+        if (funLink) {
+            funLink.addEventListener('mouseenter', () => glitchLink(funLink.dataset.hover));
+            funLink.addEventListener('focus', () => glitchLink(funLink.dataset.hover));
+            funLink.addEventListener('mouseleave', () => glitchLink(funLink.dataset.rest));
+            funLink.addEventListener('blur', () => glitchLink(funLink.dataset.rest));
+        }
+
+        function showLoadedAtmosphere() {
+            document.body.classList.add('page-loaded');
+        }
+
+        function showPlayableVideo() {
+            document.body.classList.add('video-loaded');
+        }
+
+        function padNumber(value) {
+            return String(value).padStart(2, '0');
+        }
+
+        function renderTimestamp() {
+            if (!timestamp) {
+                return;
+            }
+
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = padNumber(now.getMonth() + 1);
+            const day = padNumber(now.getDate());
+            const hours = padNumber(now.getHours());
+            const minutes = padNumber(now.getMinutes());
+            const seconds = padNumber(now.getSeconds());
+            const offsetMinutes = -now.getTimezoneOffset();
+            const offsetSign = offsetMinutes >= 0 ? '+' : '-';
+            const absoluteOffset = Math.abs(offsetMinutes);
+            const offsetHours = Math.floor(absoluteOffset / 60);
+            const offsetRemainder = absoluteOffset % 60;
+            const offset = offsetRemainder === 0
+                ? `${offsetSign}${offsetHours}`
+                : `${offsetSign}${offsetHours}:${padNumber(offsetRemainder)}`;
+
+            timestamp.textContent = `${year}-${month}-${day} // ${hours}:${minutes}:${seconds} GMT${offset}`;
+        }
+
+        renderTimestamp();
+        window.setInterval(renderTimestamp, 1000);
+
+        if (document.readyState === 'complete') {
+            window.setTimeout(showLoadedAtmosphere, 120);
+        } else {
+            window.addEventListener('load', () => window.setTimeout(showLoadedAtmosphere, 120), { once: true });
+        }
+
+        if (cloudVideo) {
+            if (cloudVideo.readyState >= 3) {
+                showPlayableVideo();
+            } else {
+                cloudVideo.addEventListener('canplay', showPlayableVideo, { once: true });
+            }
+
+            cloudVideo.addEventListener('error', () => {
+                document.body.classList.add('video-unavailable');
+            }, { once: true });
+        }
+
+        titleLines.forEach((line, lineIndex) => {
+            const finalText = line.dataset.final;
+            const initialText = padText(line.dataset.start || airportCodes[lineIndex], Math.max(finalText.length, (line.dataset.start || '').length));
+            line.dataset.cellCount = initialText.length;
+            renderFlapText(line, initialText, 'flap-char--title');
+        });
+
+        const routeCellCount = 17;
+
+        routeValues.forEach((value, valueIndex) => {
+            const finalText = value.dataset.final.toUpperCase();
+            const initialText = padText(value.dataset.start.toUpperCase(), routeCellCount);
+            value.setAttribute('aria-label', finalText);
+            value.dataset.cellCount = routeCellCount;
+            renderFlapText(value, initialText, 'flap-char--route');
+        });
+
+        Promise.all(titleLines.map((line, lineIndex) => (
+            animateFlapText(line, line.dataset.final, {
+                duration: 360 + lineIndex * 110,
+                maxCycles: 5,
+                baseDelay: lineIndex * 65
+            })
+        ))).then(() => {
+            document.body.classList.add('is-ready');
+            window.setTimeout(() => {
+                routeValues.forEach((value, valueIndex) => {
+                    animateFlapText(value, value.dataset.final.toUpperCase(), {
+                        duration: 520,
+                        maxCycles: 3,
+                        baseDelay: valueIndex * 85
+                    });
+                });
+            }, 220);
+        });
     </script>
 </body>
 </html>

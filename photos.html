@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photos by Jino Nicolas.">
+    <title>Photos - Jino Nicolas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+</head>
+<body class="placeholder-page detail-page photos-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Jino Nicolas homepage">Jino Nicolas</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="visually-hidden">Toggle navigation</span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+            <a href="about.html">ABOUT</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="photos.html" aria-current="page">PHOTOS</a>
+            <a class="fun-link" href="https://notjinon.github.io/employment-trail/index.html" data-rest="GAME" data-hover="TET">GAME</a>
+        </nav>
+    </header>
+
+    <main class="detail-main" id="main">
+        <section class="detail-hero detail-hero--stacked" aria-labelledby="photos-title">
+            <div>
+                <p class="eyebrow">PHOTOS // GALLERY</p>
+                <h1 id="photos-title">PHOTOS</h1>
+                <p>
+                    Placeholder gallery for travel and planespotting images. Final photos will land here as the collection gets sorted.
+                </p>
+            </div>
+        </section>
+
+        <section class="photo-gallery" aria-label="Photo gallery placeholders">
+            <article class="photo-card photo-card--large">
+                <div class="media-placeholder" role="img" aria-label="Travel photo placeholder">
+                    <span>TRAVEL</span>
+                </div>
+                <p>Travel placeholder</p>
+            </article>
+            <article class="photo-card">
+                <div class="media-placeholder" role="img" aria-label="Planespotting photo placeholder">
+                    <span>PLANESPOTTING</span>
+                </div>
+                <p>Planespotting placeholder</p>
+            </article>
+            <article class="photo-card">
+                <div class="media-placeholder" role="img" aria-label="Travel photo placeholder">
+                    <span>TRAVEL</span>
+                </div>
+                <p>Travel placeholder</p>
+            </article>
+            <article class="photo-card photo-card--wide">
+                <div class="media-placeholder" role="img" aria-label="Planespotting photo placeholder">
+                    <span>PLANESPOTTING</span>
+                </div>
+                <p>Planespotting placeholder</p>
+            </article>
+        </section>
+    </main>
+    <script src="assets/nav-glitch.js" defer></script>
+</body>
+</html>
