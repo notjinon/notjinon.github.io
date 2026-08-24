@@ -47,31 +47,62 @@
 
         <section class="photo-gallery" aria-label="Photo gallery placeholders">
             <article class="photo-card photo-card--large">
-                <div class="media-placeholder" role="img" aria-label="Travel photo placeholder">
-                    <span>TRAVEL</span>
+                <div class="media-placeholder photo-flip" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for travel photo">
+                    <span class="photo-flip__front">TRAVEL</span>
+                    <span class="photo-flip__back">Caption placeholder for travel photo.</span>
                 </div>
                 <p>Travel placeholder</p>
             </article>
             <article class="photo-card">
-                <div class="media-placeholder" role="img" aria-label="Planespotting photo placeholder">
-                    <span>PLANESPOTTING</span>
+                <div class="media-placeholder photo-flip" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for planespotting photo">
+                    <span class="photo-flip__front">PLANESPOTTING</span>
+                    <span class="photo-flip__back">Caption placeholder for planespotting photo.</span>
                 </div>
                 <p>Planespotting placeholder</p>
             </article>
             <article class="photo-card">
-                <div class="media-placeholder" role="img" aria-label="Travel photo placeholder">
-                    <span>TRAVEL</span>
+                <div class="media-placeholder photo-flip" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for travel photo">
+                    <span class="photo-flip__front">TRAVEL</span>
+                    <span class="photo-flip__back">Caption placeholder for travel photo.</span>
                 </div>
                 <p>Travel placeholder</p>
             </article>
             <article class="photo-card photo-card--wide">
-                <div class="media-placeholder" role="img" aria-label="Planespotting photo placeholder">
-                    <span>PLANESPOTTING</span>
+                <div class="media-placeholder photo-flip" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for planespotting photo">
+                    <span class="photo-flip__front">PLANESPOTTING</span>
+                    <span class="photo-flip__back">Caption placeholder for planespotting photo.</span>
                 </div>
                 <p>Planespotting placeholder</p>
             </article>
         </section>
     </main>
     <script src="assets/nav-glitch.js" defer></script>
+    <script>
+        const photoCards = [...document.querySelectorAll('.photo-flip')];
+
+        photoCards.forEach((card) => {
+            function togglePhoto() {
+                const shouldFlip = !card.classList.contains('is-flipped');
+
+                photoCards.forEach((otherCard) => {
+                    otherCard.classList.remove('is-flipped');
+                    otherCard.setAttribute('aria-pressed', 'false');
+                });
+
+                if (shouldFlip) {
+                    card.classList.add('is-flipped');
+                    card.setAttribute('aria-pressed', 'true');
+                }
+            }
+
+            card.addEventListener('click', togglePhoto);
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    togglePhoto();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

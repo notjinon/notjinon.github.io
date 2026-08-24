@@ -454,7 +454,30 @@ button:focus-visible {
     height: 0.92em;
 }
 
+.title-flap .flap-space {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    min-width: 0.68em;
+    width: auto;
+    color: transparent;
+    background: rgba(247, 247, 242, 0.035);
+    border: 1px solid rgba(247, 247, 242, 0.08);
+    border-radius: 0.025em;
+}
+
 .flap-char::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 51%;
+    z-index: 2;
+    height: 1px;
+    background: rgba(247, 247, 242, 0.22);
+}
+
+.title-flap .flap-space::after {
     content: "";
     position: absolute;
     left: 0;
@@ -815,6 +838,7 @@ button:focus-visible {
     position: absolute;
     inset: 1rem;
     border: 1px dashed rgba(247, 247, 242, 0.18);
+    transition: opacity 0.24s ease;
 }
 
 .media-placeholder span {
@@ -836,10 +860,77 @@ button:focus-visible {
 
 .photo-card {
     min-width: 0;
+    perspective: 900px;
 }
 
 .photo-card .media-placeholder {
     aspect-ratio: 3 / 4;
+}
+
+.photo-flip {
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+.photo-flip:hover,
+.photo-flip:focus-visible {
+    transform: translateY(-0.35rem);
+    filter: brightness(1.06);
+}
+
+.photo-flip:focus-visible {
+    outline: 2px solid rgba(235, 146, 125, 0.7);
+    outline-offset: 4px;
+}
+
+.photo-flip.is-flipped {
+    transform: translateY(-0.25rem) rotateY(180deg);
+}
+
+.photo-flip.is-flipped:hover,
+.photo-flip.is-flipped:focus-visible {
+    transform: translateY(-0.45rem) rotateY(180deg);
+}
+
+.photo-flip__front {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.photo-flip__back {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 1rem;
+    color: var(--white);
+    background:
+        linear-gradient(180deg, rgba(7, 9, 15, 0.08), rgba(7, 9, 15, 0.78)),
+        linear-gradient(135deg, rgba(169, 199, 216, 0.18), transparent 46%),
+        rgba(13, 20, 34, 0.92);
+    font-size: clamp(0.86rem, 1.6vw, 1rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    opacity: 0;
+    transform: rotateY(180deg);
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    transition: opacity 0.24s ease;
+}
+
+.photo-flip.is-flipped::before,
+.photo-flip.is-flipped .photo-flip__front {
+    opacity: 0;
+}
+
+.photo-flip.is-flipped .photo-flip__back {
+    opacity: 1;
 }
 
 .photo-card--large {
@@ -887,7 +978,10 @@ button:focus-visible {
     margin-bottom: 0.62rem;
 }
 
-.about-copy .return-button {
+.about-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
     margin-top: 0.9rem;
 }
 
