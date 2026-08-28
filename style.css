@@ -852,31 +852,40 @@ button:focus-visible {
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-auto-flow: dense;
-    gap: clamp(0.9rem, 2vw, 1.25rem);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(12, clamp(4.8rem, 6.4vw, 7.2rem));
+    gap: clamp(0.65rem, 1.25vw, 1rem);
     padding-top: clamp(2.5rem, 7vw, 4.5rem);
 }
 
 .photo-card {
     min-width: 0;
-    perspective: 900px;
-}
-
-.photo-card .media-placeholder {
-    aspect-ratio: 3 / 4;
+    position: relative;
+    perspective: 1200px;
 }
 
 .photo-flip {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    color: var(--white);
+    background: rgba(247, 247, 242, 0.045);
+    border: 1px solid rgba(247, 247, 242, 0.18);
+    border-radius: 6px;
+    font-family: "IBM Plex Mono", monospace;
     cursor: pointer;
     transform-style: preserve-3d;
-    transition: transform 0.28s ease, filter 0.28s ease;
+    transition: transform 0.32s ease, filter 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .photo-flip:hover,
 .photo-flip:focus-visible {
     transform: translateY(-0.35rem);
     filter: brightness(1.06);
+    border-color: rgba(247, 247, 242, 0.36);
 }
 
 .photo-flip:focus-visible {
@@ -884,67 +893,208 @@ button:focus-visible {
     outline-offset: 4px;
 }
 
-.photo-flip.is-flipped {
-    transform: translateY(-0.25rem) rotateY(180deg);
-}
-
-.photo-flip.is-flipped:hover,
-.photo-flip.is-flipped:focus-visible {
-    transform: translateY(-0.45rem) rotateY(180deg);
-}
-
-.photo-flip__front {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transition: opacity 0.2s ease;
-}
-
+.photo-flip__front,
 .photo-flip__back {
     position: absolute;
     inset: 0;
+    display: block;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.photo-flip__front {
+    transform: rotateY(0deg);
+    transition: opacity 0.24s ease, transform 0.32s ease;
+}
+
+.photo-flip__front img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-flip__back {
     z-index: 3;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: clamp(1rem, 2.4vw, 1.8rem);
     color: var(--white);
     background:
-        linear-gradient(180deg, rgba(7, 9, 15, 0.08), rgba(7, 9, 15, 0.78)),
+        linear-gradient(180deg, rgba(7, 9, 15, 0.1), rgba(7, 9, 15, 0.88)),
         linear-gradient(135deg, rgba(169, 199, 216, 0.18), transparent 46%),
         rgba(13, 20, 34, 0.92);
-    font-size: clamp(0.86rem, 1.6vw, 1rem);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: clamp(0.76rem, 1vw, 0.92rem);
     font-weight: 700;
     line-height: 1.35;
-    letter-spacing: 0.03em;
-    text-transform: none;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
     opacity: 0;
     transform: rotateY(180deg);
     backface-visibility: visible;
     -webkit-backface-visibility: visible;
-    transition: opacity 0.24s ease;
+    transition: opacity 0.24s ease, transform 0.32s ease;
 }
 
-.photo-flip.is-flipped::before,
-.photo-flip.is-flipped .photo-flip__front {
+.photo-card.is-flipped .photo-flip__front {
     opacity: 0;
+    transform: rotateY(0deg);
 }
 
-.photo-flip.is-flipped .photo-flip__back {
+.photo-card.is-flipped .photo-flip__back {
     opacity: 1;
 }
 
-.photo-card--large {
-    grid-column: span 2;
-    grid-row: span 2;
+.photo-card.is-flipped .photo-flip {
+    transform: rotateY(180deg);
 }
 
-.photo-card--large .media-placeholder,
-.photo-card--wide .media-placeholder {
-    aspect-ratio: 4 / 3;
+.photo-gallery .photo-card:nth-child(1) {
+    grid-column: 1 / 7;
+    grid-row: 1 / 4;
 }
 
-.photo-card--wide {
-    grid-column: span 2;
+.photo-gallery .photo-card:nth-child(2) {
+    grid-column: 7 / 10;
+    grid-row: 1 / 5;
+}
+
+.photo-gallery .photo-card:nth-child(3) {
+    grid-column: 10 / 13;
+    grid-row: 1 / 5;
+}
+
+.photo-gallery .photo-card:nth-child(4) {
+    grid-column: 1 / 5;
+    grid-row: 4 / 7;
+}
+
+.photo-gallery .photo-card:nth-child(5) {
+    grid-column: 5 / 7;
+    grid-row: 4 / 7;
+}
+
+.photo-gallery .photo-card:nth-child(6) {
+    grid-column: 7 / 10;
+    grid-row: 5 / 10;
+}
+
+.photo-gallery .photo-card:nth-child(7) {
+    grid-column: 10 / 13;
+    grid-row: 5 / 7;
+}
+
+.photo-gallery .photo-card:nth-child(8) {
+    grid-column: 1 / 7;
+    grid-row: 7 / 10;
+}
+
+.photo-gallery .photo-card:nth-child(9) {
+    grid-column: 10 / 13;
+    grid-row: 7 / 10;
+}
+
+.photo-gallery .photo-card:nth-child(10) {
+    grid-column: 1 / 5;
+    grid-row: 10 / 13;
+}
+
+.photo-gallery .photo-card:nth-child(11) {
+    grid-column: 5 / 13;
+    grid-row: 10 / 13;
+}
+
+.photo-card.is-focused {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1100;
+    width: var(--focused-width, min(90vw, 58rem));
+    height: var(--focused-height, min(84vh, 46rem));
+    transform: translate(-50%, -50%);
+}
+
+.photo-card.is-focused .photo-flip {
+    overflow: visible;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.photo-card.is-focused .photo-flip:hover,
+.photo-card.is-focused .photo-flip:focus-visible {
+    transform: none;
+}
+
+.photo-card.is-focused .photo-flip__front img {
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 1.4rem 5rem rgba(0, 0, 0, 0.58);
+}
+
+.photo-card.is-focused .photo-flip__back {
+    border-radius: 6px;
+    box-shadow: 0 1.4rem 5rem rgba(0, 0, 0, 0.58);
+}
+
+.photo-card.is-focused.is-flipped .photo-flip,
+.photo-card.is-focused.is-flipped .photo-flip:hover,
+.photo-card.is-focused.is-flipped .photo-flip:focus-visible {
+    transform: rotateY(180deg);
+}
+
+.photo-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    z-index: 1110;
+    display: none;
+    width: 2.35rem;
+    height: 2.35rem;
+    place-items: center;
+    padding: 0;
+    color: var(--white);
+    background: rgba(2, 4, 10, 0.78);
+    border: 1px solid rgba(247, 247, 242, 0.32);
+    border-radius: 999px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.photo-card.is-focused .photo-close {
+    display: grid;
+}
+
+.photo-close:hover,
+.photo-close:focus-visible {
+    color: var(--black);
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.photo-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(2, 4, 10, 0.76);
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(0.25rem);
+    transition: opacity 0.22s ease;
+}
+
+body.photo-modal-open {
+    overflow: hidden;
+}
+
+body.photo-modal-open .photo-scrim {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .photo-card p {
@@ -1012,11 +1162,30 @@ button:focus-visible {
     border: 1px dashed rgba(247, 247, 242, 0.16);
 }
 
+.headshot-frame--image::before {
+    display: none;
+}
+
 .headshot-frame span {
     color: rgba(247, 247, 242, 0.42);
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.18em;
+}
+
+.headshot-frame picture,
+.mosaic-card__front picture,
+.photo-flip__front picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.headshot-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .return-button {
@@ -1114,9 +1283,7 @@ button:focus-visible {
 
 .mosaic-card__front {
     position: absolute;
-    left: 1rem;
-    right: 1rem;
-    bottom: 1.4rem;
+    inset: 0;
     z-index: 2;
     color: rgba(248, 245, 239, 0.92);
     font-size: 0.72rem;
@@ -1125,6 +1292,13 @@ button:focus-visible {
     text-transform: uppercase;
     transform: rotateY(0deg);
     transition: opacity 0.24s ease, transform 0.32s ease;
+}
+
+.mosaic-card__front img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 .mosaic-card__back {
@@ -1170,31 +1344,35 @@ button:focus-visible {
 
 .mosaic-card--tall {
     grid-column: 8 / 12;
-    grid-row: 1 / 7;
+    grid-row: 1 / 6;
     background:
         linear-gradient(150deg, rgba(216, 82, 63, 0.7), transparent 52%),
         #243b53;
 }
 
 .mosaic-card--small {
-    grid-column: 1 / 5;
-    grid-row: 5 / 8;
+    grid-column: 3 / 8;
+    grid-row: 5 / 9;
     background:
         linear-gradient(135deg, rgba(198, 214, 79, 0.85), transparent 48%),
         #303329;
 }
 
 .mosaic-card--medium {
-    grid-column: 5 / 9;
-    grid-row: 5 / 10;
+    grid-column: 8 / 12;
+    grid-row: 6 / 11;
     background:
         linear-gradient(140deg, rgba(200, 155, 60, 0.78), transparent 52%),
         #172033;
 }
 
+.mosaic-card--medium .mosaic-card__front img {
+    object-position: center top;
+}
+
 .mosaic-card--portrait {
-    grid-column: 9 / 13;
-    grid-row: 7 / 11;
+    grid-column: 10 / 13;
+    grid-row: 5 / 11;
     background:
         linear-gradient(140deg, rgba(169, 199, 216, 0.72), transparent 52%),
         #3d2d38;
@@ -1528,12 +1706,27 @@ header h1 {
     .project-slots,
     .photo-gallery {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
     }
 
-    .photo-card--large,
-    .photo-card--wide {
+    .photo-gallery .photo-card:nth-child(n) {
         grid-column: auto;
         grid-row: auto;
+    }
+
+    .photo-card .photo-flip {
+        aspect-ratio: 4 / 3;
+        min-height: 16rem;
+    }
+
+    .photo-card--tall .photo-flip,
+    .photo-card--slim .photo-flip {
+        aspect-ratio: 3 / 4;
+    }
+
+    .photo-card.is-focused {
+        width: var(--focused-width, min(90vw, 44rem));
+        height: var(--focused-height, min(78vh, 40rem));
     }
 
     .about-layout {
