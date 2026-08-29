@@ -35,53 +35,149 @@
     </header>
 
     <main class="detail-main" id="main">
-        <section class="detail-hero" aria-labelledby="projects-title">
-            <div>
-                <p class="eyebrow">PROJECTS // WAYPOINT 3</p>
-                <h1 id="projects-title">PROJECTS</h1>
-                <p>Don't worry. I'm cooking, this page will be updated soon. In the meanwhile, check out some pictures.</p>
-                <a class="return-button detail-cta" href="photos.html">PHOTOS</a>
-            </div>
+        <section class="detail-hero projects-hero" aria-labelledby="projects-title">
+            <p class="eyebrow">PROJECTS // WAYPOINT 3</p>
+            <h1 id="projects-title">PROJECTS</h1>
+            <p>
+                Little personal (non-academic or professional) projects which I built for the love of the game.
+            </p>
         </section>
 
-        <!--
-        <section class="project-slots" aria-label="Project placeholders">
-            <article class="project-slot">
+        <section class="project-log" aria-label="Project highlights">
+            <article class="project-entry">
+                <button class="project-media" type="button" aria-label="Focus image: Employment Trail screenshot">
+                    <img src="assets/projects/employment-trail.png" alt="Screenshot of The Employment Trail browser game" loading="lazy" decoding="async">
+                </button>
+                <button class="project-close" type="button" aria-label="Close focused project image">X</button>
+                <div class="project-divider" aria-hidden="true"></div>
                 <div class="project-copy">
-                    <h2>Project One</h2>
-                    <p>
-                        Placeholder paragraph for the first project. Add the problem, your role, the tools used, and the outcome when this is ready.
+                    <h2>Employment Trail</h2>
+                    <p class="project-subheading">Browser Game // HTML, CSS, JavaScript</p>
+                    <p class="project-blurb">
+                        A browser-based CYOA game satirizing the strange little ritual of getting from application to offer. <BR><b>Dialogue within does NOT represent me or my views.</b>
                     </p>
-                </div>
-                <div class="media-placeholder" role="img" aria-label="Project one image placeholder">
-                    <span>PROJECT IMAGE</span>
                 </div>
             </article>
-            <article class="project-slot">
+            <article class="project-entry">
+                <button class="project-media" type="button" aria-label="Focus image: Transit Clock">
+                    <img src="assets/projects/transit-clock.jpg" alt="Raspberry Pi Transit Clock with LED dot matrix display" loading="lazy" decoding="async">
+                </button>
+                <button class="project-close" type="button" aria-label="Close focused project image">X</button>
+                <div class="project-divider" aria-hidden="true"></div>
                 <div class="project-copy">
-                    <h2>Project Two</h2>
-                    <p>
-                        Placeholder paragraph for the second project. This can stay concise, especially if the image carries most of the context.
+                    <h2>Transit Clock</h2>
+                    <p class="project-subheading">Desk Tool // Python, Raspberry Pi, GTFS-RT</p>
+                    <p class="project-blurb">
+                        A simple Raspberry Pi-based project which collects local weather and transit data via Python scripts, then displays it on an LED dot matrix display.
                     </p>
-                </div>
-                <div class="media-placeholder" role="img" aria-label="Project two image placeholder">
-                    <span>PROJECT IMAGE</span>
-                </div>
-            </article>
-            <article class="project-slot">
-                <div class="project-copy">
-                    <h2>Project Three</h2>
-                    <p>
-                        Placeholder paragraph for the third project. Use this slot for a finished build, case study, or experiment worth highlighting.
-                    </p>
-                </div>
-                <div class="media-placeholder" role="img" aria-label="Project three image placeholder">
-                    <span>PROJECT IMAGE</span>
                 </div>
             </article>
         </section>
-        -->
     </main>
+    <div class="project-scrim" aria-hidden="true"></div>
     <script src="assets/nav-glitch.js" defer></script>
+    <script>
+        const projectEntries = [...document.querySelectorAll('.project-entry')];
+        const projectScrim = document.querySelector('.project-scrim');
+        let focusedProject = null;
+        let focusedProjectTrigger = null;
+
+        function sizeFocusedProject(entry) {
+            const image = entry.querySelector('img');
+            if (!image.complete || !image.naturalWidth) {
+                image.addEventListener('load', () => {
+                    if (focusedProject === entry) {
+                        sizeFocusedProject(entry);
+                    }
+                }, { once: true });
+            }
+
+            const aspectRatio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : 4 / 3;
+            const maxWidth = window.innerWidth * 0.9;
+            const maxHeight = window.innerHeight * 0.84;
+            let width = maxWidth;
+            let height = width / aspectRatio;
+
+            if (height > maxHeight) {
+                height = maxHeight;
+                width = height * aspectRatio;
+            }
+
+            entry.style.setProperty('--focused-width', `${Math.round(width)}px`);
+            entry.style.setProperty('--focused-height', `${Math.round(height)}px`);
+        }
+
+        function clearFocusedProject() {
+            if (!focusedProject) {
+                return;
+            }
+
+            focusedProject.classList.remove('is-focused');
+            focusedProject.style.removeProperty('--focused-width');
+            focusedProject.style.removeProperty('--focused-height');
+            focusedProject.remove();
+            focusedProject = null;
+            document.body.classList.remove('project-modal-open');
+
+            if (focusedProjectTrigger) {
+                focusedProjectTrigger.focus();
+                focusedProjectTrigger = null;
+            }
+        }
+
+        function focusProject(entry) {
+            if (focusedProject) {
+                clearFocusedProject();
+            }
+
+            const clone = entry.cloneNode(true);
+            const cloneMedia = clone.querySelector('.project-media');
+            const cloneCloseButton = clone.querySelector('.project-close');
+
+            clone.classList.add('is-focused');
+            cloneMedia.setAttribute('aria-label', 'Focused project image');
+            cloneMedia.addEventListener('click', clearFocusedProject);
+            cloneCloseButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                clearFocusedProject();
+            });
+
+            focusedProject = clone;
+            focusedProjectTrigger = entry.querySelector('.project-media');
+            document.body.appendChild(clone);
+            sizeFocusedProject(clone);
+            document.body.classList.add('project-modal-open');
+            cloneCloseButton.focus();
+        }
+
+        projectEntries.forEach((entry) => {
+            const media = entry.querySelector('.project-media');
+            const closeButton = entry.querySelector('.project-close');
+
+            media.addEventListener('click', () => {
+                focusProject(entry);
+            });
+
+            closeButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                clearFocusedProject();
+                media.focus();
+            });
+        });
+
+        projectScrim.addEventListener('click', clearFocusedProject);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                clearFocusedProject();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (focusedProject) {
+                sizeFocusedProject(focusedProject);
+            }
+        });
+    </script>
 </body>
 </html>
