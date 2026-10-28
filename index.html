@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>document.documentElement.classList.add('js');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jino Nicolas is an Industrial Engineering student at Purdue headed toward airport performance analytics at American Airlines.">
@@ -20,16 +21,16 @@
     <meta name="twitter:description" content="Jino Nicolas is an Industrial Engineering student at Purdue headed toward airport performance analytics at American Airlines.">
     <meta name="twitter:image" content="https://notjinon.github.io/assets/social-preview.png">
     <meta name="twitter:image:alt" content="Jino Nicolas — Industrial Engineer | Data Analyst">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 </head>
-<body class="home-page">
+<body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div class="cloud-field" aria-hidden="true">
@@ -39,7 +40,7 @@
     </div>
 
     <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Jino Nicolas homepage">Jino Nicolas</a>
+        <a class="brand" href="#top" aria-label="Jino Nicolas, back to top">Jino Nicolas</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
             <span class="menu-toggle__line"></span>
             <span class="menu-toggle__line"></span>
@@ -47,338 +48,322 @@
             <span class="visually-hidden">Toggle navigation</span>
         </button>
         <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
-            <a href="about.html">ABOUT</a>
-            <a href="experience.html">EXPERIENCE</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="photos.html">PHOTOS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#experience">EXPERIENCE</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#flights">FLIGHTS</a>
+            <a href="#photos">PHOTOS</a>
             <a class="fun-link" href="https://notjinon.github.io/employment-trail/index.html" data-rest="GAME" data-hover="TET">GAME</a>
         </nav>
     </header>
 
     <main id="main">
-        <section class="hero" aria-labelledby="hero-title">
+        <section class="hero hero--name" id="top" aria-labelledby="hero-title">
             <div class="hero__intro">
-                <p class="eyebrow" id="current-timestamp">DATE // TIME GMT+0</p>
-                <h1 id="hero-title" class="title-flap" aria-label="Hi, I'm Jino">
-                    <span data-start="SFO" data-final="Hi,">SFO</span>
-                    <span data-start="ORD" data-final="I&rsquo;m">ORD</span>
-                    <span data-start="DFW" data-final="Jino">DFW</span>
+                <p class="eyebrow" id="current-timestamp">&nbsp;</p>
+                <h1 id="hero-title" class="title-flap flap title-name" aria-label="Jino Nicolas">
+                    <span data-start="SFO" data-final="JINO">SFO</span>
+                    <span data-start="LAF DFW" data-final="NICOLAS">LAF DFW</span>
                 </h1>
 
-                <dl class="route-list reveal-after-title" aria-label="Jino's itinerary">
-                    <div>
-                        <dt>ORIG</dt>
-                        <dd data-start="SFO BAY" data-final="SF BAY AREA">SF Bay Area</dd>
-                    </div>
-                    <div>
-                        <dt>THRU</dt>
-                        <dd data-start="LAF PUR" data-final="IE @ PURDUE">IE @ Purdue</dd>
-                    </div>
-                    <div>
-                        <dt>NEXT</dt>
-                        <dd data-start="DFW AMERICAN" data-final="AMERICAN AIRLINES">American Airlines</dd>
-                    </div>
-                </dl>
+                <div class="hero-meta reveal-after-title">
+                    <dl class="route-list" aria-label="Jino's itinerary">
+                        <div>
+                            <dt>ORIG</dt>
+                            <dd class="flap" data-start="SFO BAY" data-final="SF BAY AREA">SF Bay Area</dd>
+                        </div>
+                        <div>
+                            <dt>THRU</dt>
+                            <dd class="flap" data-start="LAF PUR" data-final="IE @ PURDUE">IE @ Purdue</dd>
+                        </div>
+                        <div>
+                            <dt>NEXT</dt>
+                            <dd class="flap" data-start="DFW AMERICAN" data-final="AMERICAN AIRLINES">American Airlines</dd>
+                        </div>
+                    </dl>
+                    <p class="hero-lead">Industrial engineer working on airport operations, data, and the people behind both.</p>
+                </div>
 
-                <div class="identity-links reveal-after-title" aria-label="Identity links">
+                <div class="identity-links reveal-after-title">
                     <a href="https://linkedin.com/in/notjinon" target="_blank" rel="noreferrer">LinkedIn</a>
                     <a href="assets/F26_ResumeO.pdf">Resume</a>
                     <a href="mailto:nicolasj@purdue.edu">Email</a>
                 </div>
             </div>
 
-            <div class="hero__mosaic reveal-after-title" aria-label="Photo mosaic">
-                <div class="mosaic-card mosaic-card--wide" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for IMG_9769">
-                    <span class="mosaic-card__front">
-                        <picture>
-                            <source srcset="assets/pictures/IMG_9769.webp" type="image/webp">
-                            <img src="assets/pictures/IMG_9769.jpg" alt="Gallery photo IMG_9769" loading="lazy" decoding="async">
-                        </picture>
-                    </span>
-                    <span class="mosaic-card__back">In front of an AAL 777-200 at DFW.</span>
-                </div>
-                <div class="mosaic-card mosaic-card--tall" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for IMG_3912">
-                    <span class="mosaic-card__front">
-                        <picture>
-                            <source srcset="assets/pictures/IMG_3912.webp" type="image/webp">
-                            <img src="assets/pictures/IMG_3912.jpg" alt="Gallery photo IMG_3912" loading="lazy" decoding="async">
-                        </picture>
-                    </span>
-                    <span class="mosaic-card__back">In front of (what I think is) a UAL 787's GEnX on the ramp at EWR.</span>
-                </div>
-                <div class="mosaic-card mosaic-card--medium" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for IMG_1926">
-                    <span class="mosaic-card__front">
-                        <picture>
-                            <source srcset="assets/pictures/IMG_1926.webp" type="image/webp">
-                            <img src="assets/pictures/IMG_1926.JPG" alt="Gallery photo IMG_1926" loading="lazy" decoding="async">
-                        </picture>
-                    </span>
-                    <span class="mosaic-card__back">Corporate-core professional headshot.</span>
-                </div>
-                <div class="mosaic-card mosaic-card--small" role="button" tabindex="0" aria-pressed="false" aria-label="Reveal caption for IMG_6789">
-                    <span class="mosaic-card__front">
-                        <picture>
-                            <source srcset="assets/pictures/IMG_6789.webp" type="image/webp">
-                            <img src="assets/pictures/IMG_6789.JPG" alt="Gallery photo IMG_6789" loading="lazy" decoding="async">
-                        </picture>
-                    </span>
-                    <span class="mosaic-card__back">In front of the Shanghai skyline.</span>
-                </div>
-            </div>
+            <p class="scroll-cue reveal-after-title" aria-hidden="true">SCROLL &darr;</p>
         </section>
+
+        <div class="sheet">
+            <section class="chapter" id="about" aria-labelledby="about-title">
+                <div class="chapter-head">
+                    <p class="eyebrow">WAYPOINT 1</p>
+                    <h2 class="chapter-title flap" id="about-title" data-flap>About</h2>
+                </div>
+                <div class="chapter-body">
+                    <div class="reveal">
+                        <p>
+                            I am an Industrial Engineering student at Purdue. I grew up in the Bay Area as the son of a
+                            flight attendant and a consultant. As such, travel and aviation in general has been a part of
+                            my life since I was a child.
+                        </p>
+                        <p>
+                            I have a deep passion for systems work, data analytics, and people. For the past two years,
+                            I've had the opportunity to work at both <b>United Airlines</b> and <b>American Airlines</b>,
+                            where I have been able to apply my skills in driving operational excellence at their busiest hubs.
+                        </p>
+                        <p>Outside of work, I enjoy travel, aviation, reading, cooking, swimming, and photography.</p>
+                        <p><strong>I will return to American Airlines' Airport Operations team after graduation in 2027.</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chapter" id="experience" aria-labelledby="experience-title">
+                <div class="chapter-head">
+                    <p class="eyebrow">WAYPOINT 2</p>
+                    <h2 class="chapter-title flap" id="experience-title" data-flap>Experience</h2>
+                    <div class="button-row">
+                        <a class="return-button" href="assets/F26_ResumeO.pdf">RESUME</a>
+                    </div>
+                </div>
+                <div class="chapter-body">
+                    <article class="entry reveal">
+                        <p class="entry-date">Summer 2026</p>
+                        <div>
+                            <h3>Airport Performance Analytics Intern</h3>
+                            <p class="entry-place">Fort Worth, TX // American Airlines</p>
+                            <p>Developed a model to analyze ramp agent performance, interactions, and trends, driving improvements for 12,000 agents across 11 stations.</p>
+                        </div>
+                    </article>
+                    <article class="entry reveal">
+                        <p class="entry-date">Summer + Fall 2025</p>
+                        <div>
+                            <h3>Airside Industrial Engineering Intern</h3>
+                            <p class="entry-place">Newark, NJ // United Airlines</p>
+                            <p>Conducted time studies on late-call maintenance delays. Led process improvement work for international biometric boarding.</p>
+                        </div>
+                    </article>
+                    <article class="entry reveal">
+                        <p class="entry-date">2025 - 2026</p>
+                        <div>
+                            <h3>Undergraduate Research Assistant</h3>
+                            <p class="entry-place">West Lafayette, IN // Purdue Department of Political Science</p>
+                            <p>Designed and implemented data pipelines for political analysis at large. Analyzed 20 years of state legislative election data.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter" id="projects" aria-labelledby="projects-title">
+                <div class="chapter-head">
+                    <p class="eyebrow">WAYPOINT 3</p>
+                    <h2 class="chapter-title flap" id="projects-title" data-flap>Projects</h2>
+                    <p class="chapter-note">Little personal (non-academic or professional) projects which I built for the love of the game.</p>
+                </div>
+                <div class="chapter-body project-grid">
+                    <article class="project reveal">
+                        <button class="zoom" type="button">
+                            <img src="assets/projects/employment-trail.png" alt="Screenshot of The Employment Trail browser game" loading="lazy" decoding="async">
+                        </button>
+                        <div>
+                            <h3><a href="https://notjinon.github.io/employment-trail/index.html">Employment Trail</a></h3>
+                            <p class="project-subheading">Browser Game // HTML, CSS, JavaScript</p>
+                            <p>A browser-based CYOA game satirizing the strange little ritual of getting from application to offer. <b>Dialogue within does NOT represent me or my views.</b></p>
+                        </div>
+                    </article>
+                    <article class="project reveal">
+                        <button class="zoom" type="button">
+                            <img src="assets/projects/transit-clock.jpg" alt="Raspberry Pi Transit Clock with LED dot matrix display" loading="lazy" decoding="async">
+                        </button>
+                        <div>
+                            <h3>Transit Clock</h3>
+                            <p class="project-subheading">Desk Tool // Python, Raspberry Pi, GTFS-RT</p>
+                            <p>A simple Raspberry Pi-based project which collects local weather and transit data via Python scripts, then displays it on an LED dot matrix display.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter chapter--wide" id="flights" aria-labelledby="flights-title">
+                <div class="chapter-head">
+                    <div>
+                        <p class="eyebrow">WAYPOINT 4</p>
+                        <h2 class="chapter-title flap" id="flights-title" data-flap>Flight Log</h2>
+                    </div>
+                    <p class="chapter-note">Every route I've flown since January 1, 2025. (Tap a route or an airport for details. Tap empty map to go back.)</p>
+                </div>
+                <div class="chapter-body flight-log reveal">
+                    <div class="flight-map" data-src="assets/flights.json" role="img" aria-label="World map of every route Jino has flown"></div>
+                    <div class="log-board" aria-hidden="true">
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="7"></span>
+                            <span class="flap log-value" data-cells="7"></span>
+                        </div>
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="10"></span>
+                            <span class="flap log-value" data-cells="10"></span>
+                        </div>
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="8"></span>
+                            <span class="flap log-value" data-cells="8"></span>
+                        </div>
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="9"></span>
+                            <span class="flap log-value" data-cells="9"></span>
+                        </div>
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="8"></span>
+                            <span class="flap log-value" data-cells="8"></span>
+                        </div>
+                        <div class="log-slot">
+                            <span class="flap log-label" data-cells="8"></span>
+                            <span class="flap log-value" data-cells="8"></span>
+                        </div>
+                    </div>
+                    <p class="visually-hidden" aria-live="polite" id="log-readout"></p>
+                </div>
+            </section>
+
+            <section class="chapter" id="photos" aria-labelledby="photos-title">
+                <div class="chapter-head">
+                    <p class="eyebrow">WAYPOINT 5</p>
+                    <h2 class="chapter-title flap" id="photos-title" data-flap>Photos</h2>
+                    <p class="chapter-note">A rotating shelf of travel, aviation, and whatever caught my eye.</p>
+                </div>
+                <div class="chapter-body">
+                    <div class="gallery">
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_7400.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_7400.JPG" alt="An artsy long-exposure shot of the Niagara River." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>An "artsy" long-exposure shot of the Niagara River. Shot on OM-5 w/ 14-150mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/6141221.webp" type="image/webp">
+                                    <img src="assets/pictures/6141221.jpg" alt="A parallel landing at DFW. An AAL A321 fore, and what looks to be an AAL A319 behind." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>A parallel landing at DFW. An AAL A321 fore, and what looks to be an AAL A319 behind. Shot on OM-5 w/ 75-300mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_1150.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_1150.jpg" alt="The Tokyo Skytree, taken near Senso-Ji." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>The Tokyo Skytree, taken near Senso-Ji. Shot on OM-5 w/ 14-150mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/6182454.webp" type="image/webp">
+                                    <img src="assets/pictures/6182454.jpg" alt="An AAL A321 on short final at DFW." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>An AAL A321 on short final at DFW. Shot on OM-5 w/ 75-300mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_3086.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_3086.jpg" alt="Venice, Italy." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>Venice, Italy. Shot on OM-5 w/ 14-150mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/File_013.webp" type="image/webp">
+                                    <img src="assets/pictures/File_013.png" alt="Sydney, Australia." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>Sydney, Australia. Shot on OM-5 w/ 14-150mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_4928.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_4928.JPG" alt="Westerkerk, Amsterdam." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>Westerkerk, Amsterdam. Shot on OM-5 w/ 14-150mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/6141669.webp" type="image/webp">
+                                    <img src="assets/pictures/6141669.jpg" alt="A UAL A319 taking off from DFW." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>A UAL A319 taking off from DFW. Shot on OM-5 w/ 75-300mm.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_1330.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_1330.jpg" alt="Kings Canyon, California, via the Mist Falls Trail." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>Kings Canyon, California, via the Mist Falls Trail.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_0618.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_0618.jpg" alt="The coastline of Maui, Hawaii." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>The coastline of Maui, Hawaii. Shot on Lumix ZS100.</figcaption>
+                        </figure>
+                        <figure class="photo reveal">
+                            <button class="zoom" type="button">
+                                <picture>
+                                    <source srcset="assets/pictures/IMG_2834.webp" type="image/webp">
+                                    <img src="assets/pictures/IMG_2834.jpg" alt="Detail of the Palace Hotel. Shanghai, China." loading="lazy" decoding="async">
+                                </picture>
+                            </button>
+                            <figcaption>Detail of the Palace Hotel. Shanghai, China.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chapter" id="contact" aria-labelledby="contact-title">
+                <div class="chapter-head">
+                    <p class="eyebrow">FINAL APPROACH</p>
+                    <h2 class="chapter-title flap" id="contact-title" data-flap>Contact</h2>
+                </div>
+                <div class="chapter-body reveal">
+                    <ul class="contact-links">
+                        <li><a href="mailto:nicolasj@purdue.edu">Email</a></li>
+                        <li><a href="https://linkedin.com/in/notjinon" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                        <li><a href="assets/F26_ResumeO.pdf">Resume</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <span>&copy; 2026 Jino Nicolas</span>
+                <a href="#top">Back to top &uarr;</a>
+            </footer>
+        </div>
     </main>
 
-    <script>
-        const menuButton = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.site-nav');
+    <dialog class="lightbox" aria-label="Image">
+        <img alt="">
+        <p></p>
+    </dialog>
 
-        menuButton.addEventListener('click', () => {
-            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-            menuButton.setAttribute('aria-expanded', String(!isOpen));
-            nav.classList.toggle('is-open', !isOpen);
-        });
-
-        nav.addEventListener('click', (event) => {
-            if (event.target.tagName === 'A') {
-                menuButton.setAttribute('aria-expanded', 'false');
-                nav.classList.remove('is-open');
-            }
-        });
-
-        const mosaicCards = [...document.querySelectorAll('.mosaic-card')];
-
-        mosaicCards.forEach((card) => {
-            function toggleCard() {
-                const shouldFlip = !card.classList.contains('is-flipped');
-
-                mosaicCards.forEach((otherCard) => {
-                    otherCard.classList.remove('is-flipped');
-                    otherCard.setAttribute('aria-pressed', 'false');
-                });
-
-                if (shouldFlip) {
-                    card.classList.add('is-flipped');
-                    card.setAttribute('aria-pressed', 'true');
-                }
-            }
-
-            card.addEventListener('click', toggleCard);
-            card.addEventListener('keydown', (event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    toggleCard();
-                }
-            });
-        });
-
-        const airportCodes = ['DFW', 'SFO', 'EWR', 'ORD', 'LAF', 'MNL', 'PVG', 'AMS', 'HND', 'NRT', 'ATH', 'VCE'];
-        const glyphs = [...airportCodes.join(''), '@', ',', '/'];
-        const titleLines = [...document.querySelectorAll('.title-flap > span')];
-        const routeValues = [...document.querySelectorAll('.route-list dd')];
-        const funLink = document.querySelector('.fun-link');
-        const cloudVideo = document.querySelector('.cloud-video');
-        const timestamp = document.querySelector('#current-timestamp');
-        let funTimer;
-
-        function padText(text, length) {
-            return text.padEnd(length, ' ');
-        }
-
-        function pickGlyph(seed) {
-            return glyphs[Math.abs(seed) % glyphs.length];
-        }
-
-        function renderFlapText(element, text, className = '') {
-            element.innerHTML = '';
-            [...text].forEach((character) => {
-                const cell = document.createElement('span');
-                cell.className = character === ' ' ? `flap-space ${className}` : `flap-char ${className}`;
-                cell.textContent = character === ' ' ? '\u00a0' : character;
-                cell.dataset.value = character;
-                cell.dataset.variant = className;
-                element.appendChild(cell);
-            });
-        }
-
-        function setCell(cell, character) {
-            cell.className = character === ' ' ? `flap-space ${cell.dataset.variant}` : `flap-char ${cell.dataset.variant}`;
-            cell.textContent = character === ' ' ? '\u00a0' : character;
-            cell.dataset.value = character;
-            cell.classList.remove('is-flipping');
-            void cell.offsetWidth;
-            cell.classList.add('is-flipping');
-        }
-
-        function animateFlapText(element, targetText, options = {}) {
-            const target = padText(targetText, element.dataset.cellCount || targetText.length);
-            const cells = [...element.querySelectorAll('.flap-char, .flap-space')];
-            const duration = options.duration || 520;
-            const maxCycles = options.maxCycles || 4;
-            const baseDelay = options.baseDelay || 0;
-
-            return Promise.all(cells.map((cell, index) => {
-                const finalCharacter = target[index] || ' ';
-                const currentCharacter = cell.dataset.value || ' ';
-
-                if (currentCharacter === finalCharacter) {
-                    return Promise.resolve();
-                }
-
-                return new Promise((resolve) => {
-                    const cycles = finalCharacter === ' ' ? 1 : 1 + ((index * 7 + finalCharacter.charCodeAt(0)) % maxCycles);
-                    const delay = baseDelay + ((index * 37) % duration);
-                    const step = 42 + ((index * 13) % 34);
-
-                    window.setTimeout(() => {
-                        let tick = 0;
-                        const timer = window.setInterval(() => {
-                            tick += 1;
-                            const isLast = tick >= cycles;
-                            const nextCharacter = isLast ? finalCharacter : pickGlyph(index + tick * 5 + finalCharacter.charCodeAt(0));
-                            setCell(cell, nextCharacter);
-
-                            if (isLast) {
-                                window.clearInterval(timer);
-                                window.setTimeout(() => {
-                                    cell.classList.remove('is-flipping');
-                                    resolve();
-                                }, 120);
-                            }
-                        }, step);
-                    }, delay);
-                });
-            }));
-        }
-
-        function glitchLink(targetText) {
-            if (!funLink) {
-                return;
-            }
-
-            window.clearInterval(funTimer);
-            const from = funLink.textContent;
-            const target = targetText.padEnd(from.length, ' ');
-            let tick = 0;
-
-            funLink.classList.add('is-glitching');
-            funTimer = window.setInterval(() => {
-                tick += 1;
-                funLink.textContent = [...target].map((character, index) => {
-                    if (tick > index + 1) {
-                        return character;
-                    }
-
-                    return glyphs[(tick * 5 + index * 7) % glyphs.length];
-                }).join('').trim();
-
-                if (tick >= target.length + 2) {
-                    window.clearInterval(funTimer);
-                    funLink.textContent = targetText;
-                    funLink.classList.toggle('is-tet', targetText === funLink.dataset.hover);
-                    funLink.classList.remove('is-glitching');
-                }
-            }, 34);
-        }
-
-        if (funLink) {
-            funLink.addEventListener('mouseenter', () => glitchLink(funLink.dataset.hover));
-            funLink.addEventListener('focus', () => glitchLink(funLink.dataset.hover));
-            funLink.addEventListener('mouseleave', () => glitchLink(funLink.dataset.rest));
-            funLink.addEventListener('blur', () => glitchLink(funLink.dataset.rest));
-        }
-
-        function showLoadedAtmosphere() {
-            document.body.classList.add('page-loaded');
-        }
-
-        function showPlayableVideo() {
-            document.body.classList.add('video-loaded');
-        }
-
-        function padNumber(value) {
-            return String(value).padStart(2, '0');
-        }
-
-        function renderTimestamp() {
-            if (!timestamp) {
-                return;
-            }
-
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = padNumber(now.getMonth() + 1);
-            const day = padNumber(now.getDate());
-            const hours = padNumber(now.getHours());
-            const minutes = padNumber(now.getMinutes());
-            const seconds = padNumber(now.getSeconds());
-            const offsetMinutes = -now.getTimezoneOffset();
-            const offsetSign = offsetMinutes >= 0 ? '+' : '-';
-            const absoluteOffset = Math.abs(offsetMinutes);
-            const offsetHours = Math.floor(absoluteOffset / 60);
-            const offsetRemainder = absoluteOffset % 60;
-            const offset = offsetRemainder === 0
-                ? `${offsetSign}${offsetHours}`
-                : `${offsetSign}${offsetHours}:${padNumber(offsetRemainder)}`;
-
-            timestamp.textContent = `${year}-${month}-${day} // ${hours}:${minutes}:${seconds} GMT${offset}`;
-        }
-
-        renderTimestamp();
-        window.setInterval(renderTimestamp, 1000);
-
-        if (document.readyState === 'complete') {
-            window.setTimeout(showLoadedAtmosphere, 120);
-        } else {
-            window.addEventListener('load', () => window.setTimeout(showLoadedAtmosphere, 120), { once: true });
-        }
-
-        if (cloudVideo) {
-            if (cloudVideo.readyState >= 3) {
-                showPlayableVideo();
-            } else {
-                cloudVideo.addEventListener('canplay', showPlayableVideo, { once: true });
-            }
-
-            cloudVideo.addEventListener('error', () => {
-                document.body.classList.add('video-unavailable');
-            }, { once: true });
-        }
-
-        titleLines.forEach((line, lineIndex) => {
-            const finalText = line.dataset.final;
-            const initialText = padText(line.dataset.start || airportCodes[lineIndex], Math.max(finalText.length, (line.dataset.start || '').length));
-            line.dataset.cellCount = initialText.length;
-            renderFlapText(line, initialText, 'flap-char--title');
-        });
-
-        const routeCellCount = 17;
-
-        routeValues.forEach((value, valueIndex) => {
-            const finalText = value.dataset.final.toUpperCase();
-            const initialText = padText(value.dataset.start.toUpperCase(), routeCellCount);
-            value.setAttribute('aria-label', finalText);
-            value.dataset.cellCount = routeCellCount;
-            renderFlapText(value, initialText, 'flap-char--route');
-        });
-
-        Promise.all(titleLines.map((line, lineIndex) => (
-            animateFlapText(line, line.dataset.final, {
-                duration: 360 + lineIndex * 110,
-                maxCycles: 5,
-                baseDelay: lineIndex * 65
-            })
-        ))).then(() => {
-            document.body.classList.add('is-ready');
-            window.setTimeout(() => {
-                routeValues.forEach((value, valueIndex) => {
-                    animateFlapText(value, value.dataset.final.toUpperCase(), {
-                        duration: 520,
-                        maxCycles: 3,
-                        baseDelay: valueIndex * 85
-                    });
-                });
-            }, 220);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+    <script src="assets/main.js" defer></script>
+    <script src="assets/tracker.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,820 @@
+{
+ "since": "2025-01-01",
+ "airports": {
+  "AKL": [
+   -37.008,
+   174.792,
+   "NZ"
+  ],
+  "AMS": [
+   52.309,
+   4.764,
+   "NL"
+  ],
+  "ATH": [
+   37.936,
+   23.944,
+   "GR"
+  ],
+  "AUS": [
+   30.194,
+   -97.67,
+   "US"
+  ],
+  "BOS": [
+   42.364,
+   -71.005,
+   "US"
+  ],
+  "CPH": [
+   55.618,
+   12.656,
+   "DK"
+  ],
+  "DCA": [
+   38.852,
+   -77.038,
+   "US"
+  ],
+  "DFW": [
+   32.897,
+   -97.038,
+   "US"
+  ],
+  "EWR": [
+   40.69,
+   -74.174,
+   "US"
+  ],
+  "FAT": [
+   36.776,
+   -119.718,
+   "US"
+  ],
+  "HND": [
+   35.553,
+   139.781,
+   "JP"
+  ],
+  "HOU": [
+   29.645,
+   -95.279,
+   "US"
+  ],
+  "IAD": [
+   38.944,
+   -77.456,
+   "US"
+  ],
+  "IAH": [
+   29.984,
+   -95.341,
+   "US"
+  ],
+  "IND": [
+   39.717,
+   -86.294,
+   "US"
+  ],
+  "JFK": [
+   40.64,
+   -73.779,
+   "US"
+  ],
+  "LAF": [
+   40.412,
+   -86.937,
+   "US"
+  ],
+  "LAX": [
+   33.942,
+   -118.408,
+   "US"
+  ],
+  "LGA": [
+   40.777,
+   -73.873,
+   "US"
+  ],
+  "MDW": [
+   41.786,
+   -87.752,
+   "US"
+  ],
+  "MEL": [
+   -37.669,
+   144.841,
+   "AU"
+  ],
+  "MEX": [
+   19.436,
+   -99.072,
+   "MX"
+  ],
+  "NRT": [
+   35.765,
+   140.386,
+   "JP"
+  ],
+  "OAK": [
+   37.721,
+   -122.221,
+   "US"
+  ],
+  "OGG": [
+   20.899,
+   -156.43,
+   "US"
+  ],
+  "ORD": [
+   41.979,
+   -87.905,
+   "US"
+  ],
+  "PHX": [
+   33.435,
+   -112.012,
+   "US"
+  ],
+  "PVG": [
+   31.144,
+   121.808,
+   "CN"
+  ],
+  "SAN": [
+   32.733,
+   -117.19,
+   "US"
+  ],
+  "SAV": [
+   32.128,
+   -81.202,
+   "US"
+  ],
+  "SBN": [
+   41.708,
+   -86.317,
+   "US"
+  ],
+  "SEA": [
+   47.45,
+   -122.309,
+   "US"
+  ],
+  "SFO": [
+   37.619,
+   -122.375,
+   "US"
+  ],
+  "SJC": [
+   37.363,
+   -121.929,
+   "US"
+  ],
+  "SYD": [
+   -33.946,
+   151.177,
+   "AU"
+  ],
+  "TOS": [
+   69.683,
+   18.919,
+   "NO"
+  ],
+  "VCE": [
+   45.505,
+   12.352,
+   "IT"
+  ],
+  "YOW": [
+   45.323,
+   -75.669,
+   "CA"
+  ]
+ },
+ "flights": [
+  {
+   "date": "2025-01-01",
+   "flight": "SK 4455",
+   "from": "TOS",
+   "to": "CPH",
+   "equip": "A20N"
+  },
+  {
+   "date": "2025-01-04",
+   "flight": "SK 935",
+   "from": "CPH",
+   "to": "SFO",
+   "equip": "A333"
+  },
+  {
+   "date": "2025-01-11",
+   "flight": "WN 185",
+   "from": "OAK",
+   "to": "HOU",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-01-11",
+   "flight": "WN 336",
+   "from": "HOU",
+   "to": "IND",
+   "equip": "B737"
+  },
+  {
+   "date": "2025-03-16",
+   "flight": "WN 4540",
+   "from": "MDW",
+   "to": "SEA",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-03-20",
+   "flight": "WN 285",
+   "from": "SEA",
+   "to": "MDW",
+   "equip": "B738"
+  },
+  {
+   "date": "2025-05-11",
+   "flight": "UA 1032",
+   "from": "ORD",
+   "to": "SFO",
+   "equip": "B753"
+  },
+  {
+   "date": "2025-07-04",
+   "flight": "UA 1849",
+   "from": "SFO",
+   "to": "IAD",
+   "equip": "B789"
+  },
+  {
+   "date": "2025-07-04",
+   "flight": "UA 3497",
+   "from": "IAD",
+   "to": "LGA",
+   "equip": "E75L"
+  },
+  {
+   "date": "2025-07-07",
+   "flight": "UA 2337",
+   "from": "EWR",
+   "to": "ORD",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-07-09",
+   "flight": "UA 534",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "A21N"
+  },
+  {
+   "date": "2025-07-11",
+   "flight": "UA 1992",
+   "from": "EWR",
+   "to": "IAD",
+   "equip": "B752"
+  },
+  {
+   "date": "2025-07-17",
+   "flight": "UA 1261",
+   "from": "EWR",
+   "to": "AUS",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-07-20",
+   "flight": "UA 249",
+   "from": "AUS",
+   "to": "EWR",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-07-29",
+   "flight": "UA 2100",
+   "from": "EWR",
+   "to": "ORD",
+   "equip": "A21N"
+  },
+  {
+   "date": "2025-07-30",
+   "flight": "UA 1332",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-08-10",
+   "flight": "UA 3691",
+   "from": "YOW",
+   "to": "EWR",
+   "equip": "E75L"
+  },
+  {
+   "date": "2025-08-10",
+   "flight": "UA 4403",
+   "from": "EWR",
+   "to": "YOW",
+   "equip": "CRJ7"
+  },
+  {
+   "date": "2025-08-22",
+   "flight": "UA 2164",
+   "from": "EWR",
+   "to": "ORD",
+   "equip": "A21N"
+  },
+  {
+   "date": "2025-08-22",
+   "flight": "UA 5047",
+   "from": "ORD",
+   "to": "LAF",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-08-25",
+   "flight": "UA 2066",
+   "from": "ORD",
+   "to": "LGA",
+   "equip": "B738"
+  },
+  {
+   "date": "2025-08-25",
+   "flight": "UA 5070",
+   "from": "LAF",
+   "to": "ORD",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-08-28",
+   "flight": "UA 2328",
+   "from": "EWR",
+   "to": "SFO",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-08-29",
+   "flight": "UA 837",
+   "from": "SFO",
+   "to": "NRT",
+   "equip": "B77W"
+  },
+  {
+   "date": "2025-09-01",
+   "flight": "UA 327",
+   "from": "SAN",
+   "to": "EWR",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-09-01",
+   "flight": "UA 33",
+   "from": "NRT",
+   "to": "LAX",
+   "equip": "B789"
+  },
+  {
+   "date": "2025-09-01",
+   "flight": "UA 5216",
+   "from": "LAX",
+   "to": "SAN",
+   "equip": "E75L"
+  },
+  {
+   "date": "2025-09-05",
+   "flight": "UA 1055",
+   "from": "DCA",
+   "to": "ORD",
+   "equip": "B737"
+  },
+  {
+   "date": "2025-09-05",
+   "flight": "UA 4499",
+   "from": "EWR",
+   "to": "DCA",
+   "equip": "CRJ7"
+  },
+  {
+   "date": "2025-09-08",
+   "flight": "UA 472",
+   "from": "ORD",
+   "to": "LGA",
+   "equip": "B738"
+  },
+  {
+   "date": "2025-09-08",
+   "flight": "UA 5070",
+   "from": "LAF",
+   "to": "ORD",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-09-16",
+   "flight": "UA 1276",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-09-16",
+   "flight": "UA 2323",
+   "from": "EWR",
+   "to": "ORD",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-09-27",
+   "flight": "UA 1960",
+   "from": "EWR",
+   "to": "SFO",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-09-30",
+   "flight": "UA 2437",
+   "from": "SFO",
+   "to": "EWR",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-10-03",
+   "flight": "UA 1810",
+   "from": "SBN",
+   "to": "ORD",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-10-03",
+   "flight": "UA 1887",
+   "from": "EWR",
+   "to": "SBN",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-10-03",
+   "flight": "UA 5048",
+   "from": "ORD",
+   "to": "LAF",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-10-06",
+   "flight": "UA 5043",
+   "from": "LAF",
+   "to": "ORD",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-10-06",
+   "flight": "UA 563",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "B752"
+  },
+  {
+   "date": "2025-10-10",
+   "flight": "UA 4486",
+   "from": "EWR",
+   "to": "DCA",
+   "equip": "CRJ7"
+  },
+  {
+   "date": "2025-10-11",
+   "flight": "UA 4413",
+   "from": "DCA",
+   "to": "EWR",
+   "equip": "CRJ7"
+  },
+  {
+   "date": "2025-10-17",
+   "flight": "AA 2728",
+   "from": "EWR",
+   "to": "DFW",
+   "equip": "B738"
+  },
+  {
+   "date": "2025-10-17",
+   "flight": "AA 2861",
+   "from": "DFW",
+   "to": "EWR",
+   "equip": "B738"
+  },
+  {
+   "date": "2025-10-31",
+   "flight": "UA 170",
+   "from": "EWR",
+   "to": "VCE",
+   "equip": "B764"
+  },
+  {
+   "date": "2025-11-02",
+   "flight": "UA 169",
+   "from": "VCE",
+   "to": "EWR",
+   "equip": "B764"
+  },
+  {
+   "date": "2025-11-07",
+   "flight": "UA 70",
+   "from": "EWR",
+   "to": "AMS",
+   "equip": "B764"
+  },
+  {
+   "date": "2025-11-09",
+   "flight": "UA 71",
+   "from": "AMS",
+   "to": "EWR",
+   "equip": "B763"
+  },
+  {
+   "date": "2025-11-14",
+   "flight": "UA 124",
+   "from": "EWR",
+   "to": "ATH",
+   "equip": "B764"
+  },
+  {
+   "date": "2025-11-16",
+   "flight": "UA 125",
+   "from": "ATH",
+   "to": "EWR",
+   "equip": "B764"
+  },
+  {
+   "date": "2025-11-21",
+   "flight": "UA 2328",
+   "from": "EWR",
+   "to": "SFO",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-11-23",
+   "flight": "UA 60",
+   "from": "SFO",
+   "to": "MEL",
+   "equip": "B789"
+  },
+  {
+   "date": "2025-11-27",
+   "flight": "UA 61",
+   "from": "MEL",
+   "to": "SFO",
+   "equip": "B789"
+  },
+  {
+   "date": "2025-12-02",
+   "flight": "UA 435",
+   "from": "SFO",
+   "to": "EWR",
+   "equip": "B77W"
+  },
+  {
+   "date": "2025-12-05",
+   "flight": "UA 1065",
+   "from": "EWR",
+   "to": "MEX",
+   "equip": "B38M"
+  },
+  {
+   "date": "2025-12-07",
+   "flight": "UA 1085",
+   "from": "MEX",
+   "to": "IAH",
+   "equip": "A320"
+  },
+  {
+   "date": "2025-12-07",
+   "flight": "UA 1205",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "B739"
+  },
+  {
+   "date": "2025-12-07",
+   "flight": "UA 353",
+   "from": "SAV",
+   "to": "EWR",
+   "equip": "A319"
+  },
+  {
+   "date": "2025-12-07",
+   "flight": "UA 6200",
+   "from": "IAH",
+   "to": "SAV",
+   "equip": "E75L"
+  },
+  {
+   "date": "2025-12-08",
+   "flight": "UA 254",
+   "from": "EWR",
+   "to": "ORD",
+   "equip": "A21N"
+  },
+  {
+   "date": "2025-12-08",
+   "flight": "UA 5048",
+   "from": "ORD",
+   "to": "LAF",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-12-11",
+   "flight": "UA 5048",
+   "from": "ORD",
+   "to": "LAF",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-12-15",
+   "flight": "UA 485",
+   "from": "ORD",
+   "to": "EWR",
+   "equip": "A21N"
+  },
+  {
+   "date": "2025-12-15",
+   "flight": "UA 5043",
+   "from": "LAF",
+   "to": "ORD",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2025-12-25",
+   "flight": "UA 829",
+   "from": "SFO",
+   "to": "SYD",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-12-26",
+   "flight": "UA 829",
+   "from": "SFO",
+   "to": "SYD",
+   "equip": "B772"
+  },
+  {
+   "date": "2025-12-27",
+   "flight": "QF 181",
+   "from": "SYD",
+   "to": "AKL",
+   "equip": "B738"
+  },
+  {
+   "date": "2026-01-02",
+   "flight": "UA 916",
+   "from": "AKL",
+   "to": "SFO",
+   "equip": "B772"
+  },
+  {
+   "date": "2026-01-07",
+   "flight": "UA 5048",
+   "from": "ORD",
+   "to": "LAF",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2026-01-07",
+   "flight": "UA 729",
+   "from": "SFO",
+   "to": "ORD",
+   "equip": "A21N"
+  },
+  {
+   "date": "2026-05-10",
+   "flight": "UA 1116",
+   "from": "ORD",
+   "to": "SFO",
+   "equip": "B753"
+  },
+  {
+   "date": "2026-05-10",
+   "flight": "UA 5043",
+   "from": "LAF",
+   "to": "ORD",
+   "equip": "CRJ2"
+  },
+  {
+   "date": "2026-06-26",
+   "flight": "AA 1430",
+   "from": "DFW",
+   "to": "SFO",
+   "equip": "A321"
+  },
+  {
+   "date": "2026-06-28",
+   "flight": "AA 1019",
+   "from": "SJC",
+   "to": "DFW",
+   "equip": "B38M"
+  },
+  {
+   "date": "2026-07-02",
+   "flight": "AA 295",
+   "from": "DFW",
+   "to": "OGG",
+   "equip": "B788"
+  },
+  {
+   "date": "2026-07-04",
+   "flight": "AA 116",
+   "from": "OGG",
+   "to": "DFW",
+   "equip": "B772"
+  },
+  {
+   "date": "2026-07-10",
+   "flight": "AA 2224",
+   "from": "DFW",
+   "to": "BOS",
+   "equip": "A321"
+  },
+  {
+   "date": "2026-07-12",
+   "flight": "AA 479",
+   "from": "BOS",
+   "to": "DFW",
+   "equip": "B738"
+  },
+  {
+   "date": "2026-07-14",
+   "flight": "AA 1663",
+   "from": "PHX",
+   "to": "DFW",
+   "equip": "A21N"
+  },
+  {
+   "date": "2026-07-14",
+   "flight": "AA 2113",
+   "from": "PHX",
+   "to": "DFW",
+   "equip": "A321"
+  },
+  {
+   "date": "2026-07-14",
+   "flight": "AA 474",
+   "from": "DFW",
+   "to": "PHX",
+   "equip": "A321"
+  },
+  {
+   "date": "2026-07-17",
+   "flight": "AA 1223",
+   "from": "DFW",
+   "to": "FAT",
+   "equip": "B738"
+  },
+  {
+   "date": "2026-07-19",
+   "flight": "AA 1829",
+   "from": "FAT",
+   "to": "PHX",
+   "equip": "B738"
+  },
+  {
+   "date": "2026-07-20",
+   "flight": "AA 1818",
+   "from": "PHX",
+   "to": "DFW",
+   "equip": "A21N"
+  },
+  {
+   "date": "2026-08-12",
+   "flight": "AA 127",
+   "from": "DFW",
+   "to": "PVG",
+   "equip": "B789"
+  },
+  {
+   "date": "2026-08-12",
+   "flight": "AA 2782",
+   "from": "IND",
+   "to": "DFW",
+   "equip": "B738"
+  },
+  {
+   "date": "2026-08-17",
+   "flight": "9C 8515",
+   "from": "PVG",
+   "to": "HND",
+   "equip": "A20N"
+  },
+  {
+   "date": "2026-08-18",
+   "flight": "AA 168",
+   "from": "HND",
+   "to": "JFK",
+   "equip": "B789"
+  },
+  {
+   "date": "2026-08-18",
+   "flight": "AA 4423",
+   "from": "JFK",
+   "to": "IND",
+   "equip": "E75L"
+  }
+ ]
+}
